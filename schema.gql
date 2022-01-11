@@ -2,19 +2,39 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Author {
+type Product {
   id: ID!
+  offer: Float!
+  discount: Float!
+  price: Float!
   name: String!
-  books: [Book!]!
+  btn_name: String!
+  catergory: Catergory!
+  product: Catergory!
 }
 
-type Book {
+type Catergory {
   id: ID!
   title: String!
-  isbn: String!
-  author: Author!
+  discount: Float!
+  products: [Product!]!
 }
 
 type Query {
-  books: [Book!]!
+  catergories: [Catergory!]!
+  products: [Product!]!
+}
+
+type Mutation {
+  createProduct(input: CreateProductInput!): Product!
+}
+
+input CreateProductInput {
+  id: ID!
+  offer: Float!
+  discount: Float!
+  price: Float!
+  name: String!
+  btn_name: String!
+  catergory: Int!
 }

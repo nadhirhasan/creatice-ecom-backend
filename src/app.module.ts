@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthorModule } from './author/author.module';
-import { BookModule } from './book/book.module';
+import { CatergoryModule } from './catergory/catergory.module';
+import {ProductModule } from './product/product.module';
 import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
@@ -11,8 +11,8 @@ import { GraphQLModule } from '@nestjs/graphql';
       autoSchemaFile: 'schema.gql',
     }),
 
-    AuthorModule,
-    BookModule,
+    CatergoryModule,
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService],

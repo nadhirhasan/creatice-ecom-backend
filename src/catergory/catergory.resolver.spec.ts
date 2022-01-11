@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BookResolver } from './book.resolver';
+import { CatergoryResolver } from './catergory.resolver';
 
-describe('BookResolver', () => {
-  let resolver: BookResolver;
+describe('CatergoryResolver', () => {
+  let resolver: CatergoryResolver;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [BookResolver],
+      providers: [CatergoryResolver],
     }).compile();
 
-    resolver = module.get<BookResolver>(BookResolver);
+    resolver = module.get<CatergoryResolver>(CatergoryResolver);
   });
 
   it('should be defined', () => {
